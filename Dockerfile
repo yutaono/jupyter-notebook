@@ -8,4 +8,5 @@ RUN pip install jupyter_contrib_nbextensions && \
     git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding && \
     jupyter nbextension enable vim_binding/vim_binding
 
-
+RUN mkdir -p ~/.jupyter/custom && \
+    echo '.CodeMirror pre, .output pre { font-family: Monaco, monospace;  }' >  ~/.jupyter/custom/custom.css
